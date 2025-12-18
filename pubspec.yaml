@@ -82,12 +82,12 @@ flutter:
         - asset: static/Duolingo Feather Bold.ttf
     - family: Gmarket
       fonts:
-        - asset: static/GmarketSansBold.otf
-          weight: 500
         - asset: static/GmarketSansLight.otf
           weight: 100
         - asset: static/GmarketSansMedium.otf
           weight: 300
+        - asset: static/GmarketSansBold.otf
+          weight: 500
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
