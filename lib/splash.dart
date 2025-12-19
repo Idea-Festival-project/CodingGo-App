@@ -19,48 +19,41 @@ class Splash extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 3),
-          Column(
-            children: [
               FilledButton(onPressed: () {
                 print('시작하기');
               },
                   style: FilledButton.styleFrom(
-                    backgroundColor: Color(0xFFF0CD73),
+                    backgroundColor: Theme.of(context).colorScheme.primary,
                     fixedSize: Size(340, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)
                     )
                   ),
                   child: Text('시작하기',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Gmarket',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17,
-                  ),)),
-            ],
-          ),
-          SizedBox(height: 40,),
-          RichText(text: TextSpan(
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: Colors.white
+                  ),
+                  )
+              ),
+          const SizedBox(height: 40,),
+             RichText(text: TextSpan(
             text: '이미 계정이 있다면',
-            style: TextStyle(
-              color: Color(0xFFA8A8A8),
-              fontFamily: 'Gmarket',
-              fontWeight: FontWeight.bold
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: Theme.of(context).colorScheme.secondary
             ),
-            children: [
+               children: [
               TextSpan(
                 text: ' 로그인 하기',
                 style: TextStyle(
-                  color: Color(0xFFF0CD73),
+                  color: Theme.of(context).colorScheme.primary,
                   decoration: TextDecoration.underline,
-                  decorationColor: Color(0xFFF0CD73),
-                  decorationThickness: 3,
+                  decorationThickness: 3.0,
+                  decorationColor: Theme.of(context).colorScheme.primary
                 )
               ),
             ],
           )),
-          SizedBox(height: 40,)
+          const SizedBox(height: 60,)
         ],
       ),
     );
