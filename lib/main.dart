@@ -1,4 +1,5 @@
 import 'package:coding_go/login/email.dart';
+import 'package:coding_go/login/id.dart';
 import 'package:coding_go/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Splash(),
+      home:Id(),
       
       theme: ThemeData(
         useMaterial3: true,

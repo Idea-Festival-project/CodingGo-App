@@ -9,22 +9,21 @@ class Id extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(height: 170),
+          const SizedBox(height: 170),
           Padding(
               padding: const EdgeInsets.only(left: 23),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text('Coding Go에서 사용할\n'
                     '아이디를 입력해주세요.',
-                  style: TextStyle(
-                      fontFamily: 'Gmarket',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20
-                  ),
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    fontSize: 20,
+                    color: Colors.black
+                  )
                 ),
               )
           ),
-          SizedBox(height: 50,),
+          const SizedBox(height: 50,),
           Container(
             height: 50,
             width: 360,
@@ -46,61 +45,57 @@ class Id extends StatelessWidget {
                     child: TextButton(onPressed: () {
                       print('중복확인 클릭');
                     }, style:TextButton.styleFrom(
-                        side: BorderSide(color: Color(0xFFF0CD73), width: 1.5),
+                        side: BorderSide(color: Theme.of(context).colorScheme.primary, width: 1.5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)
                         ),
                     ),
                         child: Text('중복확인',
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontFamily: 'Gmarket',
-                              fontWeight: FontWeight.bold,
-                              color: Color( 0XFFF0CD73)
-                          ),)),
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontSize: 13,
+                            color: Theme.of(context).colorScheme.primary
+                          ),
+                          )),
                   )
               ),
             ),
-          )) , Spacer(flex: 3),
+          )) ,
+          const Spacer(flex: 3),
           Column(
             children: [
               FilledButton(onPressed: () {
                 print('넘어가기');
               },
                   style: FilledButton.styleFrom(
-                      backgroundColor: Color(0xFFF0CD73),
+                      backgroundColor: Theme.of(context).colorScheme.primary,
                       fixedSize: Size(340, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)
                       )
                   ),
                   child: Text('다음으로',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Gmarket',
-                      fontWeight: FontWeight.bold,
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
                       fontSize: 17,
-                    ),)),
+                      color: Colors.white
+                    ))),
             ],
           ),
           SizedBox(height: 40,),
           RichText(text: TextSpan(
             text: '이미 계정이 있다면',
-            style: TextStyle(
-                color: Color(0xFFA8A8A8),
-                fontFamily: 'Gmarket',
-                fontWeight: FontWeight.bold
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: Theme.of(context).colorScheme.secondary
             ),
             children: [
               TextSpan(
                   text: ' 로그인 하기',
-                  style: TextStyle(
-                    color: Color(0xFFF0CD73),
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
                     decoration: TextDecoration.underline,
-                    decorationColor: Color(0xFFF0CD73),
+                    decorationColor: Theme.of(context).colorScheme.primary,
                     decorationThickness: 3,
                   )
-              ),
+              )
             ],
           )),
           SizedBox(height: 60,)
