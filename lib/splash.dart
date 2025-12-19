@@ -19,6 +19,8 @@ class Splash extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 3),
+          Column(
+            children: [
               FilledButton(onPressed: () {
                 print('시작하기');
               },
@@ -32,15 +34,14 @@ class Splash extends StatelessWidget {
                   child: Text('시작하기',
                   style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     color: Colors.white
-                  ),
                   )
-              ),
+                    ,)),
+            ],
+          ),
           const SizedBox(height: 40,),
              RichText(text: TextSpan(
             text: '이미 계정이 있다면',
-            style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: Theme.of(context).colorScheme.secondary
-            ),
+            style: Theme.of(context).textTheme.labelLarge,
                children: [
               TextSpan(
                 text: ' 로그인 하기',
