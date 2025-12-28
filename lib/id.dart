@@ -24,6 +24,14 @@ class Id extends StatelessWidget {
               )
           ),
           const SizedBox(height: 50,),
+          Padding(padding: const EdgeInsets.only(left: 23),
+          child: Align(
+            child: Text('아이디',
+            style: TextStyle(
+              color: Colors.black
+            ),),
+            alignment: Alignment.centerLeft,),),
+          SizedBox(height: 5),
           Container(
             height: 50,
             width: 360,

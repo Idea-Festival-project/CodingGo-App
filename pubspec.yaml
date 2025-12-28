@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^1.0.7
+  http: ^1.1.0
+  shared_preferences: ^2.2.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -83,11 +86,11 @@ flutter:
     - family: Gmarket
       fonts:
         - asset: static/GmarketSansLight.otf
-          weight: 100
-        - asset: static/GmarketSansMedium.otf
           weight: 300
-        - asset: static/GmarketSansBold.otf
+        - asset: static/GmarketSansMedium.otf
           weight: 500
+        - asset: static/GmarketSansBold.otf
+          weight: 700
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

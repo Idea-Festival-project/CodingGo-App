@@ -1,3 +1,4 @@
+import 'package:coding_go/login/email.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -22,7 +23,7 @@ class Splash extends StatelessWidget {
           Column(
             children: [
               FilledButton(onPressed: () {
-                print('시작하기');
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Email()));
               },
                   style: FilledButton.styleFrom(
                     backgroundColor: Theme.of(context).colorScheme.primary,
